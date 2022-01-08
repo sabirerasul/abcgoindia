@@ -1,0 +1,6 @@
+Hello Word
+<?php
+
+echo "Second file";
+
+?>
