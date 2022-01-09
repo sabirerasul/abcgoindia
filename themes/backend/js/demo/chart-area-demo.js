@@ -34,7 +34,7 @@ var ItemsDataServer = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0];
 var year = 2020;
 $.ajax({
 
-    url: "data/get-chart-user-data",
+    url: "admin/data/get-chart-user-data",
     data: { year: year },
     type: "GET",
 
@@ -52,7 +52,7 @@ $.ajax({
 
 $.ajax({
 
-    url: "data/get-chart-business-data",
+    url: "admin/data/get-chart-business-data",
     data: { year: year },
     type: "GET",
 
@@ -70,7 +70,7 @@ $.ajax({
 
 $.ajax({
 
-    url: "data/get-chart-items-data",
+    url: "admin/data/get-chart-items-data",
     data: { year: year },
     type: "GET",
 

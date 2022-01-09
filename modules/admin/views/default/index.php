@@ -4,11 +4,14 @@ use app\models\Business;
 use app\models\BusinessItems;
 use app\models\BusinessCat;
 
+$this->title = "ABCGO INDIA ADMIN PANEL";
 
 $user = User::find()->all();
 $business = Business::find()->all();
 $businessCat = BusinessCat::find()->all();
 $businessItems = BusinessItems::find()->all();
+
+$link = Yii::getAlias("@web")."admin/";
 ?>
                 <!-- Begin Page Content -->
                 <div class="container-fluid">
@@ -24,7 +27,7 @@ $businessItems = BusinessItems::find()->all();
 
                         <!-- Earnings (Monthly) Card Example -->
                         <div class="col-xl-3 col-md-6 mb-4">
-                        <a href="business">
+                        <a href="<?=$link?>business">
                             <div class="card border-left-primary shadow h-100 py-2">
                                 <div class="card-body">
                                     <div class="row no-gutters align-items-center">
@@ -34,7 +37,7 @@ $businessItems = BusinessItems::find()->all();
                                             <div class="h5 mb-0 font-weight-bold text-gray-800"><?=count($business)?></div>
                                         </div>
                                         <div class="col-auto">
-                                            <i class="fas fa-calendar fa-2x text-gray-300"></i>
+                                            <i class="fas fa-briefcase fa-2x text-gray-300"></i>
                                         </div>
                                     </div>
                                 </div>
@@ -44,7 +47,7 @@ $businessItems = BusinessItems::find()->all();
 
                         <!-- Earnings (Monthly) Card Example -->
                         <div class="col-xl-3 col-md-6 mb-4">
-                            <a href='items'>
+                            <a href='<?=$link?>business-items'>
                             <div class="card border-left-success shadow h-100 py-2">
                                 <div class="card-body">
                                     <div class="row no-gutters align-items-center">
@@ -54,7 +57,7 @@ $businessItems = BusinessItems::find()->all();
                                             <div class="h5 mb-0 font-weight-bold text-gray-800"><?=count($businessItems)?></div>
                                         </div>
                                         <div class="col-auto">
-                                            <i class="fas fa-dollar-sign fa-2x text-gray-300"></i>
+                                            <i class="fas fa-boxes fa-2x text-gray-300"></i>
                                         </div>
                                     </div>
                                 </div>
@@ -64,7 +67,7 @@ $businessItems = BusinessItems::find()->all();
 
                         <!-- Earnings (Monthly) Card Example -->
                         <div class="col-xl-3 col-md-6 mb-4">
-                        <a href='business-cat'>
+                        <a href='<?=$link?>business-cat'>
                             <div class="card border-left-info shadow h-100 py-2">
                                 <div class="card-body">
                                     <div class="row no-gutters align-items-center">
@@ -85,7 +88,7 @@ $businessItems = BusinessItems::find()->all();
 
                         <!-- Pending Requests Card Example -->
                         <div class="col-xl-3 col-md-6 mb-4">
-                        <a href='user'>
+                        <a href='<?=$link?>user'>
                             <div class="card border-left-warning shadow h-100 py-2">
                                 <div class="card-body">
                                     <div class="row no-gutters align-items-center">
@@ -95,7 +98,7 @@ $businessItems = BusinessItems::find()->all();
                                             <div class="h5 mb-0 font-weight-bold text-gray-800"><?=count($user)?></div>
                                         </div>
                                         <div class="col-auto">
-                                            <i class="fas fa-comments fa-2x text-gray-300"></i>
+                                            <i class="fas fa-user fa-2x text-gray-300"></i>
                                         </div>
                                     </div>
                                 </div>
